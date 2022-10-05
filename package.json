@@ -20,7 +20,8 @@
   "dependencies": {
     "abort-controller": "^3.0.0",
     "drand-client": "^0.2.0",
-    "node-fetch": "^3.2.10"
+    "node-fetch": "^3.2.10",
+    "random": "^3.0.6"
   },
   "devDependencies": {
     "mocha": "^10.0.0",
