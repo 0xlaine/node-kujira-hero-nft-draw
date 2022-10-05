@@ -1,0 +1,24 @@
+{
+  "name": "kujira-hero-nft-draw",
+  "version": "1.0.0",
+  "description": "Random draw code for the HERO NFT WL mint on Kujira",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xlaine/node-kujira-hero-nft-draw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xlaine/node-kujira-hero-nft-draw/issues"
+  },
+  "homepage": "https://github.com/0xlaine/node-kujira-hero-nft-draw#readme",
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "drand-client": "^0.2.0",
+    "node-fetch": "^3.2.10"
+  }
+}
