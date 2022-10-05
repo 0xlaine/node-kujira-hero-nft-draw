@@ -21,7 +21,10 @@ async function main() {
 
     const roundToFetch = 2318221;
     const result = await client.get(roundToFetch);
+
     console.log(result);
+
+    await client.close();
 }
 
 
