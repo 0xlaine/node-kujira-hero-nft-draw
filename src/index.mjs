@@ -1,7 +1,8 @@
 import {Command} from 'commander';
 
-import {takeSnapshot} from "./snapshot.mjs";
-import {eligibleFilter} from "./eligible.mjs";
+import {takeSnapshot} from './snapshot.mjs';
+import {eligibleFilter} from './eligible.mjs';
+import {draw} from './draw.mjs';
 
 const program = new Command();
 
@@ -22,17 +23,9 @@ program.command('eligible')
     .option('-o, --out-dir <out-dir>', 'the directory to store the file of eligible wallet in', './snapshots')
     .action(eligibleFilter)
 
+program.command('draw')
+    .description('Carry out the random draw with the fixed drand seed')
+    .option('-f, --eligible-file <eligible-file>', 'the fully qualified path to a json eligible file created with the eligible command')
+    .action(draw)
+
 program.parse();
-
-
-// import { getRound } from './drand.mjs';
-//
-// async function main() {
-//     const roundToFetch = 2318221;
-//     const result = await getRound(roundToFetch);
-//
-//     console.log(result);
-// }
-//
-//
-// main().catch(console.error);
