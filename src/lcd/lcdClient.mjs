@@ -52,7 +52,6 @@ export async function* validatorDelegators(valoperAddr, iteratorLimit = 200) {
     let iteration = 0;
     do {
         nextKey = latestResponse.pagination.next_key;
-        console.log(`next key is: '${nextKey}'`);
 
         // If we have a next key we can fire off the HTTP request in the background, otherwise we just emit an Promise Resolve
         // to allow the `await` later to simply work
