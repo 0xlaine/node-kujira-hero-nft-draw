@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/index.mjs",
     "snapshot": "node ./src/snapshot.mjs",
-    "test": "mocha --config ./.mocharc.js"
+    "test": "mocha --config ./.mocharc.js --timeout=50000"
   },
   "repository": {
     "type": "git",
