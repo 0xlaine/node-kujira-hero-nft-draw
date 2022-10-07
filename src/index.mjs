@@ -1,6 +1,7 @@
 import {Command} from 'commander';
 
 import {takeSnapshot} from "./snapshot.mjs";
+import {eligibleFilter} from "./eligible.mjs";
 
 const program = new Command();
 
@@ -11,9 +12,15 @@ program
     .version('0.0.0');
 
 program.command('snapshot')
-    .description('Create an on-chain snapshot of delegators to Sapient Nodes validator')
+    .description('Create an snapshot from on-chain data of delegators to Sapient Nodes validator')
     .option('-o, --out-dir <out-dir>', 'the directory to store the snapshot in', './snapshots')
     .action(takeSnapshot);
+
+program.command('eligible')
+    .description('Filter a taken snapshot for eligible stakers that should take part in the raffle')
+    .option('-f, --snapshot-file <snap-file>', 'the fully qualified path to a json snapshot file taken with the snapshot command')
+    .option('-o, --out-dir <out-dir>', 'the directory to store the file of eligible wallet in', './snapshots')
+    .action(eligibleFilter)
 
 program.parse();
 
