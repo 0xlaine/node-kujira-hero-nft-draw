@@ -27,4 +27,27 @@ Due to the stable seed, anyone can clone the codebase and produce the _same resu
 
 ## Running the code
 
-.. **MORE TO COME** ..
+### Taking a snapshot from on-chain data
+
+```shell
+npm start -- snapshot
+```
+
+### Filtering out non-eligible wallets
+
+using the file obtained from the above snapshot command 
+
+```shell
+npm start -- eligible -f ./snapshots/snap-<block-height>.json 
+```
+
+Stores a `./snapshots/eligible.json` file for final draw use
+
+### Running the draw!
+
+```shell
+npm start -- draw -f ./snapshots/eligible.json
+```
+
+Output of this invocation are the 5 eligible wallets
+
