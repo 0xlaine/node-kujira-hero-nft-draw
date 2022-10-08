@@ -32,6 +32,8 @@ will be sorted descending according to their lucky number. The closer to 1 the n
 
 ### Taking a snapshot from on-chain data
 
+Snapshots are taken with:
+
 ```shell
 npm start -- snapshot
 ```
@@ -54,3 +56,37 @@ npm start -- draw -f ./snapshots/eligible.json
 
 Output of this invocation are the 5 eligible wallets
 
+## Rerunning the draw
+
+The snapshot was taken at block 3856396 and the data has been added to this repo in `./snapshots/snap-3856396.json`
+
+To re-create the `eligible.json` file run:
+
+```shell
+npm start -- eligible -f ./snapshots/snap-3856396.json 
+```
+
+Which outputs `./snapshots/eligible.json`
+
+Then run the draw code:
+
+```shell
+npm start -- draw -f ./snapshots/eligible.json
+```
+
+Which should produce:
+
+```shell
+#0: kujira12nhu3smrune8qhky7ydvv2fxv4sryheasr9hcd w. lucky number: 0.95359 (staked amount: 4.3149)
+#1: kujira1y5eqrhudwkc2uquaz3v429zuqsw4nhjmt8cs7a w. lucky number: 0.93859 (staked amount: 4.3142)
+#2: kujira1km26nq7cfqe3ljalgx2zzj6h3wppunfnkw8upp w. lucky number: 0.83964 (staked amount: 3.3142)
+#3: kujira1yucffj4d7ahgnc4trvjj32sgsw02d86uet67v7 w. lucky number: 0.74951 (staked amount: 4.3142)
+#4: kujira1pyy4v5zf4hkd7zjjpy2l2zvaa8cu2p435722my w. lucky number: 0.61068 (staked amount: 100.3142)
+///-------------------------- winners ABOVE this line --------------------------///
+#5: kujira1shcwty0uyp39ae5lz2w0872f9r5xfv4mhd90ec w. lucky number: 0.55179 (staked amount: 3.3145)
+#6: kujira1rdqf2gqpfncd06u6hjexjswpsss32d66sralm5 w. lucky number: 0.52088 (staked amount: 4.3142)
+#7: kujira1jp9hyv8sj9ucswsmwraydg54cxqvapsmre7mej w. lucky number: 0.42904 (staked amount: 5.3140)
+#8: kujira1dqyf4ja7jkz4r08k5gz6n7l9f80x4r7eahp02q w. lucky number: 0.34999 (staked amount: 156.3149)
+#9: kujira1rszvy2pshldm0xgtrtf7xx4jtwvww6yjsvnucj w. lucky number: 0.14790 (staked amount: 2.3142)
+#10: kujira10w30cdg3pwyz5ghphs6vczt2athulu7tahazuc w. lucky number: 0.03810 (staked amount: 10.3142)
+```
