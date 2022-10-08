@@ -30,7 +30,6 @@ export async function draw(options) {
         return -1;
     });
 
-    console.log(eligibleWithLuckyNumber);
     let nr = 0;
     for (const wallet of eligibleWithLuckyNumber) {
         console.log(`#${chalk.green(nr)}: ${chalk.cyan(wallet.delegator)} w. lucky number: ${chalk.yellow(wallet.luckyNumber.toFixed(5))} (staked amount: ${wallet.amount.toFixed(4)})`)
