@@ -15,7 +15,7 @@ By anyone (who are able to run some nodejs code).
 How we're going to achieve this is covered here.
 
 Using the [League of Entropy (LoE) `drand` service](https://drand.love/) we'll fetch a stable random seed from their service,
-more specifically LoE Round `2324512` (which at the time of writing is a round in the future).
+more specifically LoE Round `2327000` (which at the time of writing is a round in the future, and wil occur AFTER the snapshot).
 
 Using this secure random value, we will instantiate the `random module` with this as a `seed`. The trick is that most
 random number generators will generate _the same sequence of numbers_ when created with the _same seed_.
