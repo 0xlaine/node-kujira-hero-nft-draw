@@ -25,6 +25,9 @@ and then the code  will be executed - the output will be the winners.
 
 Due to the stable seed, anyone can clone the codebase and produce the _same result_ on their machine.
 
+The draw it self is simple: A random "lucky number" (between 0 and 1) is assigned to each eligible wallet, and then all wallets
+will be sorted descending according to their lucky number. The closer to 1 the number is the higher the chance of winning.
+
 ## Running the code
 
 ### Taking a snapshot from on-chain data
