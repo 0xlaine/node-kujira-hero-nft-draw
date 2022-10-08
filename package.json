@@ -20,6 +20,7 @@
   "homepage": "https://github.com/0xlaine/node-kujira-hero-nft-draw#readme",
   "dependencies": {
     "abort-controller": "^3.0.0",
+    "chalk": "^5.1.0",
     "commander": "^9.4.1",
     "decimal.js": "^10.4.1",
     "drand-client": "^0.2.0",
