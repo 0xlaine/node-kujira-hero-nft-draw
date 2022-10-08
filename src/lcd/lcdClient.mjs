@@ -1,6 +1,6 @@
 import got from 'got';
 
-export const BASE_URL = 'https://rest.kujira.ccvalidators.com';
+export const BASE_URL = ' https://lcd.kaiyo.kujira.setten.io/';
 
 /**
  * Fetch the latest block header information (block height and time)
